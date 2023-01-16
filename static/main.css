@@ -1,0 +1,23 @@
+.mainImg{
+    width: 100%;
+    height: 800px;
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://cdn.pixabay.com/photo/2016/09/16/19/12/ambulance-1674877_960_720.png');
+    background-position: center 30%;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+text-align: center;  
+}
+
+.search_btn{
+    display: flex;
+    margin: 80px 80px 80px 80px;
+}
+*{
+    font-family: 'Stylish', sans-serif;
+}
