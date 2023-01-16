@@ -1,19 +1,24 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
+
 
 #시작화면
 @app.route('/')
-def hospital():
+def main():
    return render_template('index.html')
 
-@app.route("/hospitallist", methods=["GET"])
+@app.route("/hospitallist/<search>", methods=["GET"])
 def hospital_get():
-    hospital_list = list(db.hospital.find({},{'_id':False}))
-    return jsonify({'hospital':hospital_list})
+   area = request.args.get('area')
+   print(area)
+   # with open('hospital.json') as f:
+      # data = json.load(f)
 
 #검색후 화면
 @app.route('/search')
 def search_page():
+   area = request.args.get('area')
+   print(area)
    return render_template('search.html')
 
 if __name__ == '__main__':
