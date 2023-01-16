@@ -1,17 +1,51 @@
 .mainImg{
     width: 100%;
     height: 800px;
-    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://cdn.pixabay.com/photo/2016/09/16/19/12/ambulance-1674877_960_720.png');
+    background-color: #b564eb81;
+    background-repeat: no-repeat;
     background-position: center 30%;
-    background-size: cover;
+    background-size: 10%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+.mainImg:hover{
+    width: 100%;
+    height: 800px;
+    background-color: #b564eb;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    background-size: 10%;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+.chunsikwrap{
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+    margin: 0px 0px 0px 2px;   
+}
+
+
+
+
 h1{
 text-align: center;  
+}
+
+.chunsik{
+margin: 0px 0px 0px 20px;    
+width: 75px;
+height: 75px;
+background-size: cover;
+background-image:url('https://media.tenor.com/ykaBF7v0ivMAAAAd/%EC%B6%98%EC%8B%9D%EC%9D%B4-%EC%B6%98%EC%8B%9D.gif');
+border-radius: 10%;
 }
 
 .search_btn{
@@ -21,3 +55,6 @@ text-align: center;
 *{
     font-family: 'Stylish', sans-serif;
 }
+
+/* background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://cdn.pixabay.com/photo/2016/09/16/19/12/ambulance-1674877_960_720.png'); */
+/* 

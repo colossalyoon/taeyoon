@@ -20,13 +20,13 @@ function show_list(){
                 let list_name = list[i]["요양기관명"];
                 let list_address = list[i]["주소"];
                 let list_village = list[i]["시도코드명"]
-                
+               
                  let temp_html = 
                  `
                     <tr>
                         <td>${list_name}</td>
                         <td>${list_address}</td>
-                        <td><button class="map">위치 보기</button></td>
+                        
                      </tr>
                  `
                  if(list_village == selected_village){
