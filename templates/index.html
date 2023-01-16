@@ -62,9 +62,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="../static/main.css">
     <script src="../javascript/main.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cute+Font&family=Stylish&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cute+Font&family=Stylish&display=swap"
+        rel="stylesheet">
     <style></style>
 </head>
 
@@ -77,30 +78,29 @@
         <div class="mypost" id="post-box">
 
         </div>
-        <div class="input-group mb-3">
-            <select class="form-select" id="star">
-                <option selected>-- 지역 선택하기 --</option>
-                <option value="1">강원도</option>
-                <option value="2">광주시</option>
-                <option value="3">경기도</option>
-                <option value="4">경상남도</option>
-                <option value="5">경상북도</option>
-                <option value="6">대구시</option>
-                <option value="7">대전시</option>
-                <option value="8">부산시</option>
-                <option value="9">서울시</option>
-                <option value="10">인천시</option>
-                <option value="11">울산시</option>
-                <option value="12">전라남도</option>
-                <option value="13">전라북도</option>
-                <option value="14">충청남도</option>
-                <option value="15">충청북도</option>
-
-            </select>
-            <button type="button" class="btn btn-success" onclick="search_btn()">검색하기</button>
-        </div>
-
+        <form action="search.html">
+            <div class="input-group mb-3">
+                <select name=area class="form-select" id="district">
+                    <option selected>-- 지역 선택하기 --</option>
+                    <option value="1">강원도</option>
+                    <option value="2">광주시</option>
+                    <option value="3">경기도</option>
+                    <option value="4">경상남도</option>
+                    <option value="5">경상북도</option>
+                    <option value="6">대구시</option>
+                    <option value="7">대전시</option>
+                    <option value="8">부산시</option>
+                    <option value="9">서울시</option>
+                    <option value="10">인천시</option>
+                    <option value="11">울산시</option>
+                    <option value="12">전라남도</option>
+                    <option value="13">전라북도</option>
+                    <option value="14">충청남도</option>
+                    <option value="15">충청북도</option>
+                </select>
+                <button type="submit" class="btn btn-success" onclick="search_btn()">검색하기</button>
+            </div>
+        </form>
     </div>
 </body>
-
 </html>
