@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+}
+
+
+.tableList{
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    margin: 0 auto;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 10px;
+    border: 1px solid;
+}
