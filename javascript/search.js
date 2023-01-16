@@ -9,17 +9,15 @@ document.getElementById("village").innerHTML = selected_village+" 병원 목록"
 function show_list(){
     $.ajax({
         type:"GET",
-        url:"https://gist.githubusercontent.com/sunyeon-Jeong/537e9cc7ae756670c07e86163a1095a4/raw/edcda4ebe68947951f931c0e8a4121e6678aa611/hospitallist.json",
+        url:"/hospitallist",
         data:{},
-        dataType:"json",
         success: function(response){
-            console.log(selected_village)
-            let list = response["hospitallist"]["row"]
-            console.log(list)
+            console.log(response)
+            let list = response["row"]
             for(let i = 0; i<list.length; i++){
                 let list_name = list[i]["요양기관명"];
                 let list_address = list[i]["주소"];
-                let list_village = list[i]["시도코드명"]
+                let list_village = list[i]["시도코드명"];
                 
                  let temp_html = 
                  `
@@ -29,7 +27,7 @@ function show_list(){
                         <td><button class="map">위치 보기</button></td>
                      </tr>
                  `
-                 if(list_village == selected_village){
+                 if (list_village == selected_village) {
                      $('#hospitalList').append(temp_html)
                  }
             }    
@@ -39,5 +37,3 @@ function show_list(){
     )}
 
 show_list();
-
-
