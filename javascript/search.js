@@ -1,8 +1,11 @@
+// let loader = document.getElementById('preload')
+// window.addEventListener("load", setTimeout(() => {
+//     loader.style.display = "none"
+// }, 3000))
+
+
 let selected_village = localStorage.getItem("dropValue")
-
-
-document.getElementById("village").innerHTML = selected_village;
-
+document.getElementById("village").innerHTML = selected_village+" 병원 목록";
 function show_list(){
     $.ajax({
         type:"GET",
@@ -21,8 +24,9 @@ function show_list(){
                  let temp_html = 
                  `
                     <tr>
-                         <td>${list_name}</td>
+                        <td>${list_name}</td>
                         <td>${list_address}</td>
+                        <td><button class="map">위치 보기</button></td>
                      </tr>
                  `
                  if(list_village == selected_village){
@@ -35,4 +39,5 @@ function show_list(){
     )}
 
 show_list();
+
 
