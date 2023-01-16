@@ -1,22 +1,11 @@
 from flask import Flask, render_template, jsonify
 app = Flask(__name__)
 
-from pymongo import MongoClient
-import certifi
-
-SECRET_KEY = 'SPARTA'
-
-ca = certifi.where()
-
-client = MongoClient("mongodb+srv://test:sparta@cluster0.orldv4f.mongodb.net/Cluster0?retryWrites=true&w=majority")
-db = client.dbsparta
-
-SECRET_KEY = 'SPARTA'
-
 #시작화면
 @app.route('/')
 def hospital():
    return render_template('index.html')
+
 @app.route("/hospitallist", methods=["GET"])
 def hospital_get():
     hospital_list = list(db.hospital.find({},{'_id':False}))
